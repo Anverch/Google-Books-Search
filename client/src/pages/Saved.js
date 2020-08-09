@@ -4,7 +4,7 @@ import Jumbo from '../components/Jumbotron'
 function Saved(){
 
     return (
-    <Jumbo />
+    <div>Saved</div>
     )
 }
 

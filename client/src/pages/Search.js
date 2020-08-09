@@ -4,7 +4,7 @@ import Jumbo from '../components/Jumbotron'
 function Search(){
 
     return (
-    <Jumbo />
+    <div>Search</div>
     );
 }
 
