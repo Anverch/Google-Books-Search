@@ -1,11 +1,10 @@
 import React from 'react'
+import Jumbo from '../components/Jumbotron'
 
 function Saved(){
 
     return (
-    <div>
-        <h1>SAVED</h1>
-    </div>
+    <Jumbo />
     )
 }
 

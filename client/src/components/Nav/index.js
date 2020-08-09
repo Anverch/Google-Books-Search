@@ -3,7 +3,7 @@ import { Navbar, Nav,  } from "react-bootstrap";
 
 function Navigation(){
     return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" className="bgcolor">
         <Navbar.Brand >Google Books</Navbar.Brand>
         <Nav className="mr-auto">
         <Nav.Link href="/">Search</Nav.Link>

@@ -1,7 +1,11 @@
+import React from "react";
+import Jumbo from '../components/Jumbotron'
 
 function Search(){
 
-    return ("Searched")
+    return (
+    <Jumbo />
+    );
 }
 
 export default Search;
