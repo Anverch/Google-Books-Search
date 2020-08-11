@@ -1,11 +1,18 @@
 import React from "react";
-import Jumbo from '../components/Jumbotron'
+import BookSearch from "../components/BookSearch";
+import Results from "../components/Results";
+
 
 function Search(){
-
-    return (
-    <div>Search</div>
+    
+    return (<div>
+        <BookSearch />
+        <Results />
+    </div>
+    
     );
 }
+
+
 
 export default Search;

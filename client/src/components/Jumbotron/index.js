@@ -8,8 +8,8 @@ function Jumbo(){
         <Jumbotron fluid>
             <Container>
                 <div className="pic" alt=""></div>
-                <h1>Google Books Search</h1>
-                <h2>Search for and Save Books of Interest</h2>
+                <h1 className="center">Google Books Search</h1>
+                <h2 className="center">Search for and Save Books of Interest</h2>
             </Container>
         </Jumbotron>
     );

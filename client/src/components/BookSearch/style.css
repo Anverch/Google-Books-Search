@@ -1,0 +1,11 @@
+.center {
+    align-items: flex-end;
+    text-align: end;
+    justify-content: end;
+}
+
+.sha {
+    -webkit-text-fill-color: white; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0275d8;
+}
