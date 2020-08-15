@@ -1,8 +1,8 @@
 import React from "react"
 import { Container, Form, FormControl, Button  } from "react-bootstrap";
 import "./style.css"
-export const GOOGLE_API_KEY="AIzaSyCfy_54qlnY0wRgc5ybklRiYZ3AOJdVkUk";
-export const GOOGLE_BASE_URL="https://www.googleapis.com/books/v1/volumes";
+export const GOOGLE_API_KEY=process.env.REACT_APP_GOOGLE_API_KEY;
+export const GOOGLE_BASE_URL=process.env.REACT_APP_GOOGLE_BASE_URL;
 
 
 export const googleSearch = async (searchTerm)=>{
@@ -10,6 +10,16 @@ export const googleSearch = async (searchTerm)=>{
     const results = await fetch(queryUrl);
     return results.json();
 }
+
+// class SearchedResults extends React.Component{
+//     state = {
+//         title: "",
+//         authors: [],
+//         description: "",
+//         image: "",
+//         link: ""
+//     }
+// }
 
 function BookSearch() {
     const runSearch= async (params)=> {
@@ -22,7 +32,7 @@ function BookSearch() {
             <Form inline >
                 <div className="center">
                     <FormControl type="text" placeholder="Search a Book" className="mr-sm-2" />
-                    <Button variant="outline-primary" wi onClick={runSearch} >Search</Button>
+                    <Button variant="outline-primary" onClick={runSearch} >Search</Button>
                 </div>
             </Form>
             <hr />

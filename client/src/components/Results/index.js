@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, Row, Col } from "react-bootstrap";
+import { Container, Card, Row, Col, Button } from "react-bootstrap";
 
 function Results(){
     return (
@@ -18,12 +18,13 @@ function Results(){
                             Description: Some quick example text to build on the card title and make up the bulk
                             of the card's content.
                         </Card.Text>
-                        <Card.Link href="#">Link</Card.Link>
+                        <Button variant="outline-primary" target="_blank" href="https://www.google.com/">Link</Button>
                         </Card.Body>
                     </Col>
                 </Row>
                 </Card>
-        </Card>
+            </Card>
+        <hr />
       </Container>
     );
 }
