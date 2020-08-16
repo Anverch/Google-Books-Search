@@ -18,10 +18,7 @@ function Saved(){
     return (
     <Container>
         <hr/>
-        <Card border="primary" style={{ width: '100%', padding: '20px' }}>
-            <h2 className="sha">Saved</h2>
-            <Results results={books} />
-        </Card>
+            <Results results={books} title="Saved" />
         <hr/>
     </Container>
     )

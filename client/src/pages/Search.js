@@ -23,11 +23,10 @@ function Search(){
         runSearch={runSearch}
         updateQuery={updateQuery}
         />
-        <Results results={books}/>
+        <Results results={books} title="Results" />
     </div>
-    
     );
-}
+};
 
 
 
