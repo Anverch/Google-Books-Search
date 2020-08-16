@@ -5,13 +5,13 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/book"
 );
 
 const bookSeed = [
   {
     title: "The Hunger Games",
-    author: ["Suzanne Collins"],
+    authors: ["Suzanne Collins"],
     description: `"Set in a dark vision of the near future, a terrifying reality TV show is taking place. 
     Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. 
     There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps 

@@ -16,7 +16,6 @@ function Search(){
     const runSearch= async ()=> {
         const searched = await googleSearch(query);
         setBooks(searched.items)
-        console.log(searched)
     }
     
     return (<div>

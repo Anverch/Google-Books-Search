@@ -1,13 +1,17 @@
 import React from "react";
 import {Card, Row, Col, Button } from "react-bootstrap";
-import { toMongoBook } from "../API";
+import { toMongoBook, saveSearchResult } from "../API";
 
 function Result({result}){
-    console.log("results", result)
-    if (!result || !result.volumeInfo) {
+    if ((!result || !result.volumeInfo) && !result.link) {
         return <div>No Book</div>
     }
-    const book = toMongoBook(result.volumeInfo);
+
+    const book = result.link?result:toMongoBook(result.volumeInfo);
+    
+    const saveBook = async ()=>{
+        await saveSearchResult(book)
+    }
     return(
         <Card border="primary" style={{ width: '100'}}>
         <Card.Header>{book.title} by {book.authors && book.authors.join(", ")}</Card.Header>
@@ -21,7 +25,7 @@ function Result({result}){
                     {book.description}
                 </Card.Text>
                 <Button variant="outline-primary" target="_blank" href={book.link}>Link</Button>
-                <Button variant="outline-success">Save</Button>
+                {!result._id && <Button variant="outline-success"onClick={saveBook}>Save</Button>}
                 </Card.Body>
             </Col>
         </Row>

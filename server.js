@@ -6,6 +6,8 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.use(cors());
+app.options("*", cors());
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,12 +18,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("/public"));
 }
 // Add routes, both API and view
-app.use(cors());
 app.use(routes);
 
-
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/book", { useNewUrlParser: true });
 
 // Send every request to the React app
 // Define any API routes before this runs

@@ -3,7 +3,7 @@ import Result from "./result"
 import { Container, Card } from "react-bootstrap";
 
 function Results({results}){
-    if (!results) {
+    if (!results || !results.length) {
         return <div>No Data</div>
     }
     return (
