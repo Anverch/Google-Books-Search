@@ -1,10 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import { Container, Form, FormControl, Button  } from "react-bootstrap";
 import "./style.css"
 
 
-function BookSearch() {
-    
+function BookSearch({runSearch}) {
     return (
         <Container >
             <h2 className="sha">Book Search</h2>
