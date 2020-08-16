@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card } from "react-bootstrap";
-import Result from '../components/Results/result';
 import Results from '../components/Results';
 import { getSavedBooks } from '../components/API';
 

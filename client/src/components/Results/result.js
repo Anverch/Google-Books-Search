@@ -4,7 +4,11 @@ import { toMongoBook, saveSearchResult } from "../API";
 
 function Result({result}){
     if ((!result || !result.volumeInfo) && !result.link) {
-        return <div>No Book</div>
+        return (<div className="center">
+            <Card>
+             No Book
+            </Card>
+             </div>)
     }
 
     const book = result.link?result:toMongoBook(result.volumeInfo);
@@ -17,7 +21,7 @@ function Result({result}){
         <Card.Header>{book.title} by {book.authors && book.authors.join(", ")}</Card.Header>
         <Row>
             <Col sm={2}>
-                <Card.Img variant="top" style={{ width: '150px' }} src={book.image && book.image} />
+                <Card.Img variant="top" style={{ width: '150px', margin: '10px'}} src={book.image && book.image} />
             </Col>
             <Col sm={10}>
                 <Card.Body>
