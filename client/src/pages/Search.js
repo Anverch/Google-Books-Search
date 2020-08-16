@@ -7,15 +7,23 @@ import { googleSearch } from "../components/API"
 function Search(){
     
     const [books, setBooks] = useState([]);
+    const [query, setQuery] = useState("");
 
-    const runSearch= async (params)=> {
-        const searched = await googleSearch("Kansas City Jazz");
+    const updateQuery = (e)=>{
+        setQuery(e.target.value)
+    }
+
+    const runSearch= async ()=> {
+        const searched = await googleSearch(query);
         setBooks(searched.items)
         console.log(searched)
     }
     
     return (<div>
-        <BookSearch runSearch={runSearch} />
+        <BookSearch 
+        runSearch={runSearch}
+        updateQuery={updateQuery}
+        />
         <Results results={books}/>
     </div>
     
