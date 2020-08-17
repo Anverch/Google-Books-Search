@@ -42,6 +42,6 @@ React-based Google Books Search app that displays books on user searches. Users 
 
   ## Questions
 
-  <img src="https://avatars.githubusercontent.com/anverch" style="width: 40px; hight:40px; border-radius:100%;">
+  <img src="https://avatars.githubusercontent.com/anverch" height="90" width="90" border-radius="100%">
 
   If you have any questions about the repo, open an issue or contact anverch@gmail.com.
